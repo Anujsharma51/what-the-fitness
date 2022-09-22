@@ -1,0 +1,148 @@
+.main {
+  background-color: black ;
+  color: white ;
+  height: 100%;
+  
+  box-sizing: border-box;
+  margin-top: -4px;
+  padding:40px;
+}
+
+.inputSection {
+  width: 85%;
+  margin: auto;
+  padding: 8px 15px;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+
+  align-items: center;
+}
+.inputSection input {
+
+    color: white;
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.loctionIcon {
+  display: flex;
+  margin-left: 20px;
+  padding: 6px 10px;
+  background: #920909 !important;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+  font-weight: 400;
+  border: none;
+}
+
+.showGym {
+  /* border: 1px solid black; */
+  margin: auto;
+  width: 94%;
+  height: 100vh;
+  display: flex;
+
+  justify-content: space-between;
+}
+.Filters {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.Cities {
+  font-size: 25px;
+}
+
+.ProductMapDiv {
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width:60%;
+  margin-top: 40px;
+}
+
+.gymDiv {
+  padding: 20px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100% !important;
+  height: 300px;
+  border-radius: 15px;
+
+  background: rgb(46, 46, 46);
+  background: linear-gradient(
+      90deg,
+      rgba(46, 46, 46, 1) 41%,
+      rgba(13, 13, 13, 1) 100%
+      );
+      color:white
+}
+.bookbtn{
+   
+   
+    display: flex;
+        justify-content: end;
+        align-items: center;
+  
+}
+.bookbtn button{
+   
+   
+   padding:14px 25px;
+    color: white;
+        font-size: 19px;
+        font-weight: 400;
+    background: #c22222;
+    border:none;
+  border-radius: 3px;
+}
+
+.ProductMapDiv::-webkit-scrollbar {
+    width: 9px;
+
+}
+
+.ProductMapDiv::-webkit-scrollbar-track {
+    display: none;
+}
+
+
+.ProductMapDiv::-webkit-scrollbar-thumb {
+    background: #f5254b;
+    border-radius: 10px;
+}
+
+.otherDeatild{
+
+    display: flex;
+    align-items: center;
+    text-align:center;
+}
+
+select{
+    background-color: rgb(109, 104, 104);
+        height: 40px;
+        width: 15rem;
+    /* border: 1px solid transparent; */
+text-indent: 15px;
+padding: 4px;
+    font-size:18px;
+}select option {
+    color: white;
+   /* margin:30px; */
+    border: 1px solid transparent;
+    background-color: rgb(84, 81, 81);
+    font-size: 1.2em;
+    
+
+}
