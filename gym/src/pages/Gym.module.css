@@ -1,11 +1,11 @@
 .main {
-  background-color: black ;
-  color: white ;
+  background-color: black;
+  color: white;
   height: 100%;
-  
+
   box-sizing: border-box;
   margin-top: -4px;
-  padding:40px;
+  padding: 40px;
 }
 
 .inputSection {
@@ -19,8 +19,7 @@
   align-items: center;
 }
 .inputSection input {
-
-    color: white;
+  color: white;
   width: 80%;
   background-color: transparent;
   border: none;
@@ -66,7 +65,7 @@
   flex-direction: column;
   overflow-y: scroll;
   overflow-x: hidden;
-  width:60%;
+  width: 60%;
   margin-top: 40px;
 }
 
@@ -81,68 +80,126 @@
 
   background: rgb(46, 46, 46);
   background: linear-gradient(
-      90deg,
-      rgba(46, 46, 46, 1) 41%,
-      rgba(13, 13, 13, 1) 100%
-      );
-      color:white
+    90deg,
+    rgba(46, 46, 46, 1) 41%,
+    rgba(13, 13, 13, 1) 100%
+  );
+  color: white;
 }
-.bookbtn{
-   
-   
-    display: flex;
-        justify-content: end;
-        align-items: center;
-  
+.bookbtn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
-.bookbtn button{
-   
-   
-   padding:14px 25px;
-    color: white;
-        font-size: 19px;
-        font-weight: 400;
-    background: #c22222;
-    border:none;
+.bookbtn button {
+  padding: 14px 25px;
+  color: white;
+  font-size: 19px;
+  font-weight: 400;
+  background: #c22222;
+  border: none;
   border-radius: 3px;
 }
 
 .ProductMapDiv::-webkit-scrollbar {
-    width: 9px;
-
+  width: 9px;
 }
 
 .ProductMapDiv::-webkit-scrollbar-track {
-    display: none;
+  display: none;
 }
-
 
 .ProductMapDiv::-webkit-scrollbar-thumb {
-    background: #f5254b;
-    border-radius: 10px;
+  background: #f5254b;
+  border-radius: 10px;
 }
 
-.otherDeatild{
+.otherDeatild {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
 
+select {
+  background-color: rgb(109, 104, 104);
+  height: 40px;
+  width: 15rem;
+  /* border: 1px solid transparent; */
+  text-indent: 15px;
+  padding: 4px;
+  font-size: 18px;
+}
+select option {
+  color: white;
+  /* margin:30px; */
+  border: 1px solid transparent;
+  background-color: rgb(84, 81, 81);
+  font-size: 1.2em;
+}
+
+@media all and (min-width: 600px) and (max-width: 900px) {
+  .ProductMapDiv {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 40%;
+    margin-top: 40px;
+  }
+
+  .bookbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bookbtn button {
+    padding: 3px 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: 200;
+    background: #c22222;
+    border: none;
+    border-radius: 3px;
+  }
+  .otherDeatild {
+    white-space: nowrap;
     display: flex;
     align-items: center;
-    text-align:center;
-}
+    text-align: center;
+  }
 
-select{
+  .showGym {
+    /* border: 1px solid black; */
+    margin: auto;
+    width: 64%;
+    height: 100vh;
+    display: flex;
+
+    justify-content: space-between;
+  }
+
+  .Filters {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  select {
     background-color: rgb(109, 104, 104);
-        height: 40px;
-        width: 15rem;
+    height: 40px;
+    width: 8rem;
     /* border: 1px solid transparent; */
-text-indent: 15px;
-padding: 4px;
-    font-size:18px;
-}select option {
+   
+    padding: 2px;
+    font-size: 11px;
+  }
+
+  select option {
     color: white;
-   /* margin:30px; */
+    /* margin:30px; */
     border: 1px solid transparent;
     background-color: rgb(84, 81, 81);
     font-size: 1.2em;
-    
-
+  }
 }

@@ -57,7 +57,64 @@
     background-color: azure;
 }
 
-@media screen and (max-width: 600px) {
+ @media all and (min-width: 350px) and (max-width: 780px) {
+    .detailPage {
+        display: block;
+        width: 90%;
+        margin: auto;
+        text-align: left;
+        color: white;
+    }
+
+    .detail {
+        font-size: 15px;
+    }
+
+    .plans {
+        background-color: rgb(18, 18, 18);
+        width: 100%;
+        margin: auto;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .facilities {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .PriceDiv {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        border-radius: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+        align-items: center;
+        height: 100px;
+    }
+
+    .term {
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .term p {
+        margin-right: 20px;
+        padding: 10px;
+        background-color: red;
+        border-radius: 7px;
+    }
+}
+
+
+/* media */
+
+
+@media screen and (max-width: 800px) {
     .detailPage {
         display: block;
         width: 90%;
@@ -89,7 +146,7 @@
         margin: auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        
+
         border-radius: 15px;
         margin-bottom: 20px;
         text-align: center;
@@ -98,7 +155,8 @@
     }
 
     .term {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .term p {
@@ -108,3 +166,4 @@
         border-radius: 7px;
     }
 }
+

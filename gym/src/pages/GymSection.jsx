@@ -62,7 +62,7 @@ const GymSection = () => {
                 }}
               >
                 <h2>{el.gym_name}</h2>
-                <p>{+Math.floor(Math.random(1) * 4) + 1} ★★★★★</p>
+                <p>{+Math.floor(Math.random(1) * 4) + 1} ★★★★</p>
                 <p>
                   {el.address1} , {el.address2}, {el.city}
                 </p>
