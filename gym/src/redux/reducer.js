@@ -5,7 +5,7 @@ const init = {
   cityData: [],
   gymData: [],
   isError: false,
-  terms: [],
+  terms: JSON.parse(localStorage.getItem("terms")) || [],
   plans: [
     {
       id: 1,
@@ -41,7 +41,7 @@ const init = {
     },
   ],
 };
-
+// console.log( JSON.parse(localStorage.getItem("terms")));
 export const gymReducer = (state = init, { type, payload }) => {
   switch (type) {
     case productActionsTypes.REQUEST: {

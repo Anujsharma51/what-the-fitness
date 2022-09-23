@@ -9,14 +9,15 @@ import Loader from "../components/Loder";
 
 const GymSection = () => {
   const [filter, setFilter] = useState("");
+  const [text, setText] = useState("");
 
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(showCitys());
   }, []);
   useEffect(() => {
-    dispatch(showGyms());
-  }, []);
+    dispatch(showGyms(filter));
+  }, [filter]);
 
   const AllData = useSelector((state) => state);
 
@@ -27,7 +28,7 @@ const GymSection = () => {
   return (
     <div className={styled.main}>
       <div className={styled.inputSection}>
-        <input type="text" />
+        <input type="text" onChange={(e) => setText(e.target.value)} />
         <button className={styled.loctionIcon}>
           <MdLocationOn fontSize={25} />
         </button>
@@ -41,7 +42,11 @@ const GymSection = () => {
           <select onChange={(e) => setFilter(e.target.value)}>
             <option>Select City</option>
             {AllData.cityData.map((el, i) => {
-              return <option key={i}>{el.city}</option>;
+              return (
+                <option value={el.city} key={i}>
+                  {el.city}
+                </option>
+              );
             })}
           </select>
         </div>

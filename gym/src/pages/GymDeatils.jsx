@@ -9,6 +9,7 @@ import styled from "./GymDetails.module.css";
 const GymDeatils = () => {
   const [filter, setFilter] = useState("");
   const { state: el } = useLocation();
+
   const state = useSelector((state) => state);
 
   const handleChange = (e) => {
@@ -17,12 +18,10 @@ const GymDeatils = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(sortingPrice(filter));
-    dispatch(showGyms());
-  }, [filter]);
+    // dispatch(showGyms());
+  }, [dispatch, filter]);
 
   if (state.isLoading) {
-    console.log("state.isLoading:", state.isLoading);
-
     return <Loader />;
   }
   return (
@@ -61,7 +60,7 @@ const GymDeatils = () => {
             handleChange(e);
           }}
         >
-          <option value="de">Default</option>
+          <option value="default">Default</option>
           <option value="lh">low to high</option>
           <option value="hl"> high to low</option>
         </select>

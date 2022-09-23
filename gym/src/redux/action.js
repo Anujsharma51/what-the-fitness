@@ -31,16 +31,19 @@ export const showCitys = () => (dispatch) => {
     dispatch(getCity(data.data));
   });
 };
-export const showGyms = () => (dispatch) => {
+export const showGyms = (city) => (dispatch) => {
   dispatch(productFetchRequest());
   axios
     .get(
-      "https://devapi.wtfup.me/gym/nearestgym?lat=30.325488815850512&long=78.0042384802231&city=noida"
+      `https://devapi.wtfup.me/gym/nearestgym?lat=30.325488815850512&long=78.0042384802231&city=${city}`
     )
     .then(({ data }) => {
       console.log("data:", data);
 
       dispatch(getGym(data.data));
+
+      localStorage.setItem("terms", JSON.stringify(data.terms));
+
       dispatch(getTerms(data.terms));
     });
 };
